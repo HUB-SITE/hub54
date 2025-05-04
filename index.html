@@ -2,8 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title><!-- === EDITAR AQUI === -->HUB 54 | Agência Criativa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><!-- === EDITAR TÍTULO === -->HUB 54 | Agência Criativa</title>
   <style>
     :root {
       --bg: #0f0f0f;
@@ -20,25 +20,25 @@
     }
 
     html, body {
-      height: 100%;
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      scroll-behavior: smooth;
     }
 
     .section-wrapper {
       width: 75%;
       margin: 0 auto;
       padding: 60px 0;
+      max-width: 1200px;
     }
 
     header {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 60px 0;
     }
 
     header h1 {
@@ -47,9 +47,67 @@
     }
 
     header p {
-      max-width: 600px;
       color: #ccc;
       margin-top: 1rem;
+      max-width: 600px;
+    }
+
+    .hero-media {
+      width: 100%;
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-media img, .hero-media video {
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 16px;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: black;
+      padding: 10px 16px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    .carousel-section {
+      width: 100vw;
+      background-color: #101010;
+      overflow: hidden;
+      padding: 60px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: fit-content;
+      animation: scroll 40s linear infinite;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .logo-item {
+      height: 60px;
+      filter: grayscale(100%) brightness(5);
+      opacity: 0.8;
+      transition: transform 0.3s;
+    }
+
+    .logo-item:hover {
+      transform: scale(1.1);
+      filter: brightness(1);
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     h2 {
@@ -59,64 +117,14 @@
       color: var(--highlight);
     }
 
-    .carousel-section {
-      width: 100vw;
-      background-color: #0a0a0a;
-      padding: 60px 0;
-      overflow: hidden;
-    }
-
-    .carousel-track {
-      display: flex;
-      width: fit-content;
-      animation: scroll 30s linear infinite;
-      gap: 30px;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      padding: 30px;
-      min-width: 280px;
-      max-width: 300px;
-      flex-shrink: 0;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    }
-
-    .card h3 {
-      color: var(--primary);
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #ccc;
-      font-size: 0.95rem;
-    }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .about {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .about, .contact {
       text-align: center;
     }
 
     .about p {
       max-width: 700px;
+      margin: auto;
       color: #ccc;
-    }
-
-    section.contact {
-      background-color: #101010;
     }
 
     form {
@@ -128,7 +136,6 @@
       background: var(--card-bg);
       padding: 30px;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
 
     input, textarea {
@@ -137,7 +144,6 @@
       border: none;
       background: #1a1a1a;
       color: white;
-      font-size: 1rem;
     }
 
     button {
@@ -145,10 +151,9 @@
       background: var(--primary);
       border: none;
       border-radius: 8px;
-      font-size: 1rem;
       font-weight: bold;
-      color: black;
       cursor: pointer;
+      color: black;
     }
 
     footer {
@@ -158,81 +163,62 @@
       color: #888;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       .section-wrapper {
         width: 90%;
       }
-    }
 
-    @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
 
-      h2 {
-        font-size: 1.6rem;
+      .carousel-track {
+        gap: 20px;
       }
 
-      .card {
-        min-width: 220px;
+      .logo-item {
+        height: 40px;
       }
     }
   </style>
 </head>
 <body>
 
+  <a href="https://wa.me/SEUNUMERO" class="whatsapp-btn" target="_blank">WhatsApp</a>
+
   <header class="section-wrapper">
     <h1><!-- === EDITAR AQUI === -->HUB 54</h1>
-    <p><!-- === EDITAR AQUI === -->Somos uma agência de criativos que transforma ideias em conteúdo digital poderoso.</p>
+    <p><!-- === EDITAR AQUI === -->A agência que impulsiona sua presença digital com criatividade e performance.</p>
+
+    <div class="hero-media">
+      <!-- === EDITAR: Inserir IMG ou VIDEO === -->
+      <img src="banner.jpg" alt="Banner ou vídeo" />
+      <!-- OU VIDEO -->
+      <!-- <video src="video.mp4" autoplay muted loop></video> -->
+    </div>
   </header>
 
   <section class="carousel-section">
-    <h2>Serviços</h2>
+    <h2>Empresas que confiam na HUB 54</h2>
     <div class="carousel-track">
-      <!-- === EDITAR CARDS AQUI === -->
-      <div class="card">
-        <h3>Criativos Mensais</h3>
-        <p>Posts estáticos e animados personalizados para seu Instagram.</p>
-      </div>
-      <div class="card">
-        <h3>Edição de Vídeo</h3>
-        <p>Reels, cortes e vídeos dinâmicos com alto padrão de edição.</p>
-      </div>
-      <div class="card">
-        <h3>Manipulação de Imagem</h3>
-        <p>Montagens e retoques criativos para campanhas visuais impactantes.</p>
-      </div>
-      <div class="card">
-        <h3>Gestão de Conteúdo</h3>
-        <p>Calendário, textos, identidade visual e postagens otimizadas.</p>
-      </div>
-
-      <!-- Duplicação para looping -->
-      <div class="card">
-        <h3>Criativos Mensais</h3>
-        <p>Posts estáticos e animados personalizados para seu Instagram.</p>
-      </div>
-      <div class="card">
-        <h3>Edição de Vídeo</h3>
-        <p>Reels, cortes e vídeos dinâmicos com alto padrão de edição.</p>
-      </div>
+      <!-- === EDITAR LOGOS === -->
+      <img class="logo-item" src="logo1.png" alt="Empresa 1" />
+      <img class="logo-item" src="logo2.png" alt="Empresa 2" />
+      <img class="logo-item" src="logo3.png" alt="Empresa 3" />
+      <img class="logo-item" src="logo4.png" alt="Empresa 4" />
+      <img class="logo-item" src="logo1.png" alt="Empresa 1" />
+      <img class="logo-item" src="logo2.png" alt="Empresa 2" />
     </div>
   </section>
 
   <section class="about section-wrapper">
-    <div>
-      <h2>Sobre Nós</h2>
-      <p><!-- === EDITAR AQUI === -->
-        A HUB 54 é formada por um time criativo e estratégico, focado em performance e presença digital. 
-        Trabalhamos com marcas que querem se destacar de verdade no mercado e construir autoridade com consistência.
-      </p>
-    </div>
+    <h2>Sobre a HUB 54</h2>
+    <p><!-- === EDITAR AQUI === -->Somos especialistas em transformar ideias em estratégias visuais que geram engajamento, autoridade e vendas.</p>
   </section>
 
   <section class="contact section-wrapper">
     <h2>Entre em Contato</h2>
     <form>
-      <!-- === EDITAR CAMPOS OU INTEGRAR COM FORMULARIO REAL === -->
       <input type="text" placeholder="Seu nome" required />
       <input type="email" placeholder="Seu e-mail" required />
       <textarea placeholder="Sua mensagem" rows="5" required></textarea>
@@ -241,7 +227,6 @@
   </section>
 
   <footer>
-    <!-- === EDITAR AQUI === -->
     © 2025 HUB 54 - Todos os direitos reservados.
   </footer>
 
