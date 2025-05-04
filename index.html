@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><!-- === EDITAR AQUI === -->HUB 54 | Agência Criativa</title>
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --primary: #00ff88;
+      --text: #ffffff;
+      --highlight: #00c26e;
+      --card-bg: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    .section-wrapper {
+      width: 75%;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+
+    header p {
+      max-width: 600px;
+      color: #ccc;
+      margin-top: 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--highlight);
+    }
+
+    .carousel-section {
+      width: 100vw;
+      background-color: #0a0a0a;
+      padding: 60px 0;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: fit-content;
+      animation: scroll 30s linear infinite;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 30px;
+      min-width: 280px;
+      max-width: 300px;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .about {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 700px;
+      color: #ccc;
+    }
+
+    section.contact {
+      background-color: #101010;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: auto;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #1a1a1a;
+      color: white;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 12px;
+      background: var(--primary);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #111;
+      color: #888;
+    }
+
+    @media (max-width: 900px) {
+      .section-wrapper {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      .card {
+        min-width: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="section-wrapper">
+    <h1><!-- === EDITAR AQUI === -->HUB 54</h1>
+    <p><!-- === EDITAR AQUI === -->Somos uma agência de criativos que transforma ideias em conteúdo digital poderoso.</p>
+  </header>
+
+  <section class="carousel-section">
+    <h2>Serviços</h2>
+    <div class="carousel-track">
+      <!-- === EDITAR CARDS AQUI === -->
+      <div class="card">
+        <h3>Criativos Mensais</h3>
+        <p>Posts estáticos e animados personalizados para seu Instagram.</p>
+      </div>
+      <div class="card">
+        <h3>Edição de Vídeo</h3>
+        <p>Reels, cortes e vídeos dinâmicos com alto padrão de edição.</p>
+      </div>
+      <div class="card">
+        <h3>Manipulação de Imagem</h3>
+        <p>Montagens e retoques criativos para campanhas visuais impactantes.</p>
+      </div>
+      <div class="card">
+        <h3>Gestão de Conteúdo</h3>
+        <p>Calendário, textos, identidade visual e postagens otimizadas.</p>
+      </div>
+
+      <!-- Duplicação para looping -->
+      <div class="card">
+        <h3>Criativos Mensais</h3>
+        <p>Posts estáticos e animados personalizados para seu Instagram.</p>
+      </div>
+      <div class="card">
+        <h3>Edição de Vídeo</h3>
+        <p>Reels, cortes e vídeos dinâmicos com alto padrão de edição.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section-wrapper">
+    <div>
+      <h2>Sobre Nós</h2>
+      <p><!-- === EDITAR AQUI === -->
+        A HUB 54 é formada por um time criativo e estratégico, focado em performance e presença digital. 
+        Trabalhamos com marcas que querem se destacar de verdade no mercado e construir autoridade com consistência.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact section-wrapper">
+    <h2>Entre em Contato</h2>
+    <form>
+      <!-- === EDITAR CAMPOS OU INTEGRAR COM FORMULARIO REAL === -->
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <!-- === EDITAR AQUI === -->
+    © 2025 HUB 54 - Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
